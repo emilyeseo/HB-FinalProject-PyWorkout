@@ -3,8 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 class User(db.Model):
-    """A user."""
-
+    """Users"""
     __tablename__ = 'users'
 
     user_id = db.Column(db.Integer,
@@ -19,39 +18,55 @@ class User(db.Model):
     def __repr__(self):
         return f'<User user_id= {self.user_id} email = {self.email}>'
 
-class Workout_plan(db.Model):
-    """Workout plan."""
-    ___tablename__ = 'workout_plans'
-
-    workout_plan_id = db.Column(db.Integer,
-                            autoincrement=True,
-                            primary_key=True)
-    user_id = db.Column(db.Integer)
-    first_exercise = db.Column(db.Integer)
-    second_exercise = db.Column(db.Integer)
-    third_exercise = db.Column(db.Integer)
-    fourth_exercise = db.Column(db.Integer)
-
-    def __repr__(self):
-        return f'<Workout_plan workout_plan_id= {self.workout_plan_id} workout_plan = {self.workout_plan}>'
 
 class Exercise(db.Model):
-    """Workout plan."""
-    ___tablename__ = 'exercises'
+    """Exercises.  Information about each exercise."""
+    __tablename__ = 'exercises'
 
     exercise_id = db.Column(db.Integer,
                             autoincrement=True,
                             primary_key=True)
-    exercise_name = db.Column(db.String(15))
-    equipment = db.Column(db.String(15))
-    intensity = db.Column(db.Integer)
-    description = db.Column(db.Text)
+                           
+    exercise_name = db.Column(db.String)
+    main_muscle_group = db.Column(db.String) 
+    type_of_exercise = db.Column(db.String)
+    difficulty = db.Column(db.Integer)
+    equipment = db.Column(db.String)
+    instructions = db.Column(db.Text)
+    exercise_img1 = db.Column(db.String)
+    exercise_img2 = db.Column(db.String) 
     reps = db.Column(db.Integer)
-    main_muscle_group = db.Column(db.String(30))
-    type_of_exercise = db.Column(db.String(15))
 
     def __repr__(self):
-        return f'<Workout_plan exercise= {self.exercise_id} exercise_name = {self.exercise_name}>'
+        return f'<Exercise exercise_id= {self.exercise_id} exercise_name = {self.exercise_name}>'
+
+
+class Workout_plan(db.Model):
+    """A Workout plan. A user can have 0 to many workout plans."""
+    __tablename__ = 'workout_plans'
+
+    workout_plan_id = db.Column(db.Integer,
+                            autoincrement=True,
+                            primary_key=True)
+    user_id = db.Column(db.Integer,
+                            db.ForeignKey('users.user_id'))
+    first_exercise = db.Column(db.Integer,
+                            db.ForeignKey('exercises.exercise_id'))
+    second_exercise = db.Column(db.Integer,
+                            db.ForeignKey('exercises.exercise_id'))   
+    third_exercise = db.Column(db.Integer,
+                            db.ForeignKey('exercises.exercise_id'))
+    fourth_exercise = db.Column(db.Integer,
+                            db.ForeignKey('exercises.exercise_id'))
+
+    exercises = db.relationship('Exercise', backref = 'workout_plans')
+    users = db.relationship('User', backref='workout_plans')
+
+    def __repr__(self):
+        return f'<Workout_plan workout_plan_id = {self.workout_plan_id} user_id = {self.user_id}>'
+
+    
+
 
 def connect_to_db(flask_app, db_uri='postgresql:///exercises', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri

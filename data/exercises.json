@@ -1,15 +1,17 @@
 [   {
-    "exercise_name": "Band Good Morning",
-    "main_muscle_group":"Legs" ,
-    "type":"Strength" ,
-    "difficulty": "Beginner", 
-    "equipment": "Bands" , 
-    "instructions": "1.) To begin this exercise; start off standing on a band, wrapping it around your neck and making sure that it is evenly distributed for stretching in each arm\n2.) Bend at the knees and extend down with your hips then straighten out your legs and come to a vertical position.\n3.) Repeat this exercise for as many repetitions as needed"
+        "exercise_name": "Band Good Morning",
+        "main_muscle_group":"Legs" ,
+        "type_of_exercise":"Strength" ,
+        "difficulty": "Beginner", 
+        "equipment": "Bands" , 
+        "instructions": "1.) To begin this exercise; start off standing on a band, wrapping it around your neck and making sure that it is evenly distributed for stretching in each arm\n2.) Bend at the knees and extend down with your hips then straighten out your legs and come to a vertical position.\n3.) Repeat this exercise for as many repetitions as needed",
+        "exercise_img1": "https://www.jefit.com/images/exercises/800_600/1864.jpg",
+        "exercise_img2": "https://www.jefit.com/images/exercises/800_600/1865.jpg"
     }, 
     {
         "exercise_name": "Band Squat",
         "main_muscle_group":"Legs" ,
-        "type":"Strength" ,
+        "type_of_exercise":"Strength" ,
         "difficulty": "Beginner", 
         "equipment": "Bands" , 
         "instructions": "1.) Start off standing with your feet on the exercise bands with your feet shoulder width apart.\n2.) Grab onto the handles of the bands and pull them up to your shoulders in a slow and controlled motion.\n3.) With your abs drawn in, squat down until your thighs are parallel with the floor.\n4.) Slowly return to the starting position.\n5.) Repeat for as many reps and sets as desired."
@@ -17,7 +19,7 @@
     {
         "exercise_name": "Dumbbell Lunges",
         "main_muscle_group":"Legs" ,
-        "type":"Strength" ,
+        "type_of_exercise":"Strength" ,
         "difficulty": "Beginner", 
         "equipment": "Dumbell" , 
         "instructions": "1.) Start off grabbing a dumbbell in each hand and standing with your feet about 8 inches apart and toes facing forward as this will be your starting position.\n2.) Once in position take a step forward (about 2 to 3 feet), keeping your abs tightly drawn and and your upper body straight.\n3.) Continue forward and slowly lower one knee down towards the ground and keeping the other knee bent at a 90 degree angle, not letting the back knee touch the ground.\n4.) Slowly lower one knee down as if kneeling while keeping your other knee bent at a 90 degree angle, do not let your knee touch the ground.\n5.) Hold the position for a count then return back up to the starting position."
@@ -25,7 +27,7 @@
     {
         "exercise_name": "Dumbbell Pile Squat",
         "main_muscle_group": "Legs",
-        "type": "Strength",
+        "type_of_exercise": "Strength",
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) Start off standing with your feet 2-4 inches wider than your shoulders, with your toes pointed out at a 45 degree angle.\n2.) Grab onto a dumbbell with both hands in the center of your body making sure that you keep your knees slightly bent and your back straight.\n3.) Squat down as if you were going to sit in a chair, bringing your thighs parallel to the floor.\n4.) With a controlled motion return to starting position.\n5.) Repeat for as many reps and sets as desired."
@@ -33,7 +35,7 @@
     {
         "exercise_name": "Dumbbell Wall Squat",
         "main_muscle_group": "Legs",
-        "type": "Strength",
+        "type_of_exercise": "Strength",
         "difficulty": "Beginner", 
         "equipment": "Dumbell",
         "instructions": "1.) Start off by positioning your back flat up against a wall holding dumbbells at your sides with your knees slightly bent.\n2.) Slowly slide your body down against the wall, lowering your glutes towards the floor until your thighs are parallel with the ground and hold for a count.\n3.) Return back to the starting position.\n4.) Repeat for as many reps and sets as desired."
@@ -41,7 +43,7 @@
     {
         "exercise_name": "Freehand Jump Squat",
         "main_muscle_group": "Legs",
-        "type": "Strength",
+        "type_of_exercise": "Strength",
         "difficulty": "Intermediate", 
         "equipment": "Body Only",
         "instructions": "1.) To begin this exercise; start off by crossing your arms over your chest and keeping your body standing straight up.\n2.) Then squat down as in a normal full squat bending at your knees until your thighs are parallel with the floor.\n3.) When you reach the full squat position, use the force from your heels to push up and jump straight into the air as high as possible.\n4.) As soon as you touch the floor, immediately repeat the exercise once again.\n5.) Repeat this exercise for as many repetitions as needed"
@@ -49,7 +51,7 @@
     {
         "exercise_name": "Dumbbell Stiff-Legged Deadlift",
         "main_muscle_group": "Legs",
-        "type": "Strength",
+        "type_of_exercise": "Strength",
         "difficulty": "Intermediate", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off standing up straight with your feet shoulder width apart and your arms at your sides with a dumbbell in each hand.\n2.) While keeping your knees still, slowly lower your upper body and the dumbbells towards the floor over your feet.\n3.) Keep moving your body forward until you feel a stretch in your hamstrings then hold for a count.\n4.) Return back to the starting position by extending through your hips until you are at the start.\n5.) Repeat for as many reps and sets as desired."

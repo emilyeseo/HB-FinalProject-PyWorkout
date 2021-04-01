@@ -1,6 +1,6 @@
-import flask 
-import jinja2
-import crud
+from flask import Flask
+from jinja2 import StrictUndefined
+# import crud
 from model import connect_to_db
 
 
