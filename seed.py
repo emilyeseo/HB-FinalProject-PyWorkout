@@ -21,13 +21,24 @@ with open('data/exercises.json') as f:
     
 exercise_in_db = []
 for exercise in exercise_data:
-    title, overview, poster_path = (movie['title'],
-                                    movie['overview'],
-                                    movie['poster_path'])
-    release_date = datetime.strptime(movie['release_date'], '%Y-%m-%d')
+    exercise_name, main_muscle_group, type_of_exercise, difficulty, 
+    equipment, instructions,exercise_img1, exercise_img2, reps = (exercise['exercise_name'],
+                                                                exercise['main_muscle_group'],
+                                                                exercise['type_of_exercise'],
+                                                                exercise['difficulty'],
+                                                                exercise['equipment'],
+                                                                exercise['instructions'],
+                                                                exercise['exercise_img1'],
+                                                                exercise['exercise_img2'],
+                                                                exercise['reps'])   
 
-    db_movie = crud.create_movie(title,
-                                 overview,
-                                 release_date,
-                                 poster_path)
+    db_exercise = crud.create_exercise(exercise_name,
+                                        main_muscle_group,
+                                        type_of_exercise,
+                                        difficulty,
+                                        equipment,
+                                        instructions,
+                                        exercise_img1,
+                                        exercise_img2,
+                                        reps)
     movies_in_db.append(db_movie)
