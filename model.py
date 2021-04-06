@@ -18,6 +18,41 @@ class User(db.Model):
     def __repr__(self):
         return f'<User user_id= {self.user_id} email = {self.email}>'
 
+class Workout_plan(db.Model):
+    """A Workout plan. A user can have 0 to many workout plans."""
+    __tablename__ = 'workout_plans'
+
+    workout_plan_id = db.Column(db.Integer,
+                            autoincrement=True,
+                            primary_key=True)
+    user_id = db.Column(db.Integer,
+                            db.ForeignKey('users.user_id'))
+
+    users = db.relationship('User', backref='workout_plans')
+
+    def __repr__(self):
+        return f'<Workout_plan workout_plan_id = {self.workout_plan_id} user_id = {self.user_id}>'
+
+class Workout_plan_exercise(db.Model):
+    """A randomized Workout plan. """
+
+    __tablename__ = 'workout_plan_exercises'
+
+    workout_plan_exercise_id = db.Column(db.Integer,
+                                        autoincrement = True,
+                                        primary_key=True)
+    workout_plan_id = db.Column(db.Integer,
+                                db.ForeignKey('workout_plans.workout_plan_id'))
+    exercise_id = db.Column(db.Integer,
+                            db.ForeignKey('exercises.exercise_id'))
+
+    def __repr__(self):
+        return f'<Workout_plan_exercise workout_plan_exercise_id = {self.workout_plan_exercise_id}>'
+
+    
+    exercises = db.relationship ('Exercise', backref = 'workout_plan_exercises') 
+    workout_plans  = db.relationship ('Workout_plan', backref = 'workout_plan_exercises')
+
 
 class Exercise(db.Model):
     """Exercises.  Information about each exercise."""
@@ -30,9 +65,9 @@ class Exercise(db.Model):
     exercise_name = db.Column(db.String)
     main_muscle_group = db.Column(db.String) 
     type_of_exercise = db.Column(db.String)
-    difficulty = db.Column(db.Integer)
+    difficulty = db.Column(db.String)
     equipment = db.Column(db.String)
-    instructions = db.Column(db.Text)
+    instructions = db.Column(db.String)
     exercise_img1 = db.Column(db.String)
     exercise_img2 = db.Column(db.String) 
     reps = db.Column(db.Integer)
@@ -41,29 +76,7 @@ class Exercise(db.Model):
         return f'<Exercise exercise_id= {self.exercise_id} exercise_name = {self.exercise_name}>'
 
 
-class Workout_plan(db.Model):
-    """A Workout plan. A user can have 0 to many workout plans."""
-    __tablename__ = 'workout_plans'
 
-    workout_plan_id = db.Column(db.Integer,
-                            autoincrement=True,
-                            primary_key=True)
-    user_id = db.Column(db.Integer,
-                            db.ForeignKey('users.user_id'))
-    first_exercise = db.Column(db.Integer,
-                            db.ForeignKey('exercises.exercise_id'))
-    second_exercise = db.Column(db.Integer,
-                            db.ForeignKey('exercises.exercise_id'))   
-    third_exercise = db.Column(db.Integer,
-                            db.ForeignKey('exercises.exercise_id'))
-    fourth_exercise = db.Column(db.Integer,
-                            db.ForeignKey('exercises.exercise_id'))
-
-    exercises = db.relationship('Exercise', backref = 'workout_plans')
-    users = db.relationship('User', backref='workout_plans')
-
-    def __repr__(self):
-        return f'<Workout_plan workout_plan_id = {self.workout_plan_id} user_id = {self.user_id}>'
 
     
 
@@ -83,6 +96,6 @@ if __name__ == '__main__':
 
     # Call connect_to_db(app, echo=False) if your program output gets
     # too annoying; this will tell SQLAlchemy not to print out every
-    # query it executes.
+    # query it executes.mm
 
     connect_to_db(app)

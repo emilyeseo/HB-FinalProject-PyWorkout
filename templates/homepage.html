@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
-{% block title %}Movie Ratings Home{% endblock %}
+{% block title %}Let me plan a workout for you!{% endblock %}
 
 {% block body %}
   <h1>What Should we workout today?</h1>
 
   <h2>Navigation</h2>
   <ul>
+    <li><a href = "/your_account">My Account</a></li>
     <li><a href="/movies">View all Workouts</a></li>
-    <li>View trails around me</li>
+    <li><a href = "/trails">Trails around me</a></li>
     
   </ul>
 
-  <h2>Create an Account</h2>
+  <!-- Log in page -->
+  <h2>Log In</h2>
   <form action="/users" method="POST">
     <p>
       Email <input type="text" name="email">
@@ -25,4 +27,5 @@
       <input type="submit">
     </p>
   </form>
+  
 {% endblock %}

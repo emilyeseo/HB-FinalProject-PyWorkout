@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import (Flask, render_template, render_template, flash, session)
 from jinja2 import StrictUndefined
-# import crud
 from model import connect_to_db
+import crud
+
 
 
 app = Flask(__name__)
@@ -18,6 +19,11 @@ def index():
     """take me to about page. project details"""
     return render_template('about.html')
 
+@app.route('/exercises')
+def all_exercises(): 
+    exercises = crud.get_exercises()
+
+    return render_template('all_exercises.html', exercises = exercises)
 
 
 if __name__ == '__main__':
