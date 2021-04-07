@@ -1,7 +1,7 @@
 [   
     {
         "exercise_name": "Band Good Morning",
-        "main_muscle_group":"Legs" ,
+        "main_muscle_group":"Legs",
         "type_of_exercise":"Strength",
         "difficulty": "Beginner", 
         "equipment": "Bands", 
@@ -13,7 +13,7 @@
         "exercise_name": "Band Squat",
         "main_muscle_group":"Legs",
         "type_of_exercise":"Strength",
-        "difficulty": "Beginner", 
+        "difficulty": "Beginner",
         "equipment": "Bands" , 
         "instructions": "1.) Start off standing with your feet on the exercise bands with your feet shoulder width apart.\n2.) Grab onto the handles of the bands and pull them up to your shoulders in a slow and controlled motion.\n3.) With your abs drawn in, squat down until your thighs are parallel with the floor.\n4.) Slowly return to the starting position.\n5.) Repeat for as many reps and sets as desired.", 
         "exercise_img2":"https://www.jefit.com/images/exercises/800_600/860.jpg",

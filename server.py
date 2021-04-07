@@ -5,25 +5,33 @@ import crud
 
 
 
+
+
 app = Flask(__name__)
 app.secret_key = "SecretKey"
 app.jinja_env.undefined = StrictUndefined
 
+#to check the homepage is working 
 @app.route('/')
 def homepage():
     """View homepage"""
     return render_template('homepage.html')
 
-@app.route('/about')
-def index():
-    """take me to about page. project details"""
-    return render_template('about.html')
+# @app.route('/about')
+# def index():
+#     """take me to about page. project details"""
+#     return render_template('about.html')
 
 @app.route('/exercises')
 def all_exercises(): 
     exercises = crud.get_exercises()
 
     return render_template('all_exercises.html', exercises = exercises)
+
+@app.route('/create_workout_plan')
+def create_workout_plan():
+
+    return render_template('create_workout_plan_form.html')
 
 
 if __name__ == '__main__':

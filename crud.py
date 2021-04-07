@@ -1,6 +1,10 @@
 """CRUD OPERATIONS."""
-from model import db, User, Exercise, Workout_plan, connect_to_db
-from random import choice, randint
+from model import db, User, Exercise, Workout_plan_exercise, Workout_plan, connect_to_db
+import crud
+
+import jinja2 import StrictUndefined
+
+
 
 def create_user(firstname,lastname,email,password):
     """Create and return a new user."""
