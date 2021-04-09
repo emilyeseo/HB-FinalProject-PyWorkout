@@ -1,8 +1,6 @@
 """CRUD OPERATIONS."""
 from model import db, User, Exercise, Workout_plan_exercise, Workout_plan, connect_to_db
-import crud
-
-import jinja2 import StrictUndefined
+from random import choice, randint
 
 
 
@@ -58,6 +56,31 @@ def create_workout_plan_exercise(workout_plan_id, exercise_id):
     db.session.commit()
 
     return workout_plan_exercise
+
+def get_exercises():
+    """Display and return all exercises"""
+
+    return Exercise.query.all()
+
+
+def get_user_by_email(email):
+    """Return a user """
+
+    return User.query.filter_by(email=email).first()
+
+def get_exercises_by_main_group(main_muscle_group):
+
+    return Exercise.query.filter_by(main_muscle_group = main_muscle_group).all()
+
+def get_workout_plan_by_id
+
+
+
+
+
+    
+    
+   
 
 if __name__ == '__main__':
     from server import app
