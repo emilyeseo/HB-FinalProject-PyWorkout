@@ -72,7 +72,13 @@ def get_exercises_by_main_group(main_muscle_group):
 
     return Exercise.query.filter_by(main_muscle_group = main_muscle_group).all()
 
-def get_workout_plan_by_id
+def get_workout_plan_exercises_by_workout_plan_id(workout_plan_id):
+
+    #from database, we are using workout plan exercise class to find the exercise by using workout plan id
+    return Workout_plan_exercise.query.filter_by(workout_plan_id = workout_plan_id).all()
+
+
+    
 
 
 

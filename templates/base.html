@@ -9,6 +9,19 @@
         {% block head %}{% endblock %}
     </head>
     <body>
+        <ul>
+            <li><a href = "/your_account"> My Account </a></li>
+            <li><a href = "/create_workout_plan_form"> Create Workout Plan </a></li>
+            <li><a href="/all_exercises">View all Workouts</a></li>
+            <li><a href = "/trails">Trails around me</a></li>
+            <li><a href = "/logout"> Log out</a></li>
+        
+            
+          </ul>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+
         {% block body %}{% endblock %}
     </body>
 </html>

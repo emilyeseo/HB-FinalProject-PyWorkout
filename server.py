@@ -28,15 +28,24 @@ def login():
 
     user = crud.get_user_by_email(email)
 
-    if user: 
+    if user and password == user.password: 
+
         session['logged_in_user_id'] = user.user_id
-        
-        print('***********')
-        print(session)
+        flash('successfully logged in')
 
         return redirect('/create_workout_plan_form')
     else: 
+        flash('User information could not be found')
         return redirect ('/')
+
+        
+@app.route('/logout')
+def logout():
+
+    session.pop('logged_in_user_id', None)
+    flash("Successfully logged out")
+        
+    return redirect('/')    
 
 @app.route('/all_exercises')
 def all_exercises():
@@ -49,7 +58,13 @@ def all_exercises():
 @app.route('/create_workout_plan_form')
 def create_workout_plan_form():
 
-    return render_template('create_workout_plan_form.html')
+    if 'logged_in_user_id' in session:
+
+        return render_template('create_workout_plan_form.html')
+        
+    flash('Please log in or create an account')   
+
+    return redirect('/')
 
 
 @app.route('/create_workout_plan', methods = ['POST'])
@@ -60,28 +75,46 @@ def create_workout_plan():
         workout_plan= crud.create_workout_plan(session['logged_in_user_id'])
         main_muscle_group = request.form.get("main_muscle_group")
         
-    
+        #created workout plan exercise and added to our data base
         if main_muscle_group == 'back':
             exercises = crud.get_exercises_by_main_group('Back') #list of back exercise objects
             
             for i in range(4):
                 random_back_exercise = choice(exercises) #using random library choice
-                print('*************')
-                print(random_back_exercise)
-
                 random_back_workout = crud.create_workout_plan_exercise(workout_plan.workout_plan_id, random_back_exercise.exercise_id)
+        
+        elif main_muscle_group == 'legs':
+            exercises = crud.get_exercises_by_main_group('Legs')
+            for i in range(4): 
+                random_leg_exercise = choice(exercises)
+                random_leg_workout = crud.create_workout_plan_exercise(workout_plan.workout_plan_id, random_leg_exercise.exercise_id)
 
-            
-        # elif main_muscle_group == 'legs':
-        #     workout_for_the_day = crud.create_workout_plan_exercise()
+        elif main_muscle_group == 'glutes':
+            exercises = crud.get_exercises_by_main_group('Glutes')
+            for i in range(4): 
+                random_glute_exercise = choice(exercises)
+                random_glute_workout = crud.create_workout_plan_exercise(workout_plan.workout_plan_id, random_glute_exercise.exercise_id)
         
-        # elif main_muscle_group == 'glute':
-        #     workout_for_the_day = crud.create_workout_plan_exercise()
-        
-        # elif main_muscle_group == 'abs':
-        #     workout_for_the_day = crud.create_workout_plan_exercise()
+        elif main_muscle_group == 'abs':
+            exercises = crud.get_exercises_by_main_group('Abs')
+            for i in range(4): 
+                random_abs_exercise = choice(exercises)
+                random_abs_workout = crud.create_workout_plan_exercise(workout_plan.workout_plan_id, random_abs_exercise.exercise_id)    
+
+
+        #create this crud function
+        #list of four workout plan exercises objects (Workout_plan_exercise class) for the workout_plan_id
+        user_list_of_random_exercises = crud.get_workout_plan_exercises_by_workout_plan_id(workout_plan.workout_plan_id)
+        # print("==================")
+        # # print(user_list_of_random_exercises[0]) #first object in our list
+        # # print(user_list_of_random_exercises[0].exercises) #view exercises relationship
+        # print(user_list_of_random_exercises[0].exercises.exercise_name)
+        # print(user_list_of_random_exercises[0].exercises.type_of_exercise)
+        # print(user_list_of_random_exercises[0].exercises.difficulty)
+        # print(user_list_of_random_exercises[0].exercises.instructions)
+        # print("==================")
     
-    return redirect('/')
+    return render_template("display_workout_plan.html", user_list_of_random_exercises = user_list_of_random_exercises)
 
 
 
@@ -94,4 +127,4 @@ def create_workout_plan():
 
 if __name__ == '__main__':
     connect_to_db(app)
-    app.run(host='0.0.0.0', port="5001", debug=True)
+    app.run(host='0.0.0.0', port="5000", debug=True)

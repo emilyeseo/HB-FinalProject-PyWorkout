@@ -18,6 +18,29 @@ class User(db.Model):
     def __repr__(self):
         return f'<User user_id= {self.user_id} email = {self.email}>'
 
+
+class Exercise(db.Model):
+    """Exercises.  Information about each exercise."""
+    __tablename__ = 'exercises'
+
+    exercise_id = db.Column(db.Integer,
+                            autoincrement=True,
+                            primary_key=True)
+                           
+    exercise_name = db.Column(db.String)
+    main_muscle_group = db.Column(db.String) 
+    type_of_exercise = db.Column(db.String)
+    difficulty = db.Column(db.String)
+    equipment = db.Column(db.String)
+    instructions = db.Column(db.String)
+    exercise_img1 = db.Column(db.String)
+    exercise_img2 = db.Column(db.String) 
+    reps = db.Column(db.Integer)
+
+    def __repr__(self):
+        return f'<Exercise exercise_id= {self.exercise_id} exercise_name = {self.exercise_name}>'
+
+
 class Workout_plan(db.Model):
     """A Workout plan. A user can have 0 to many workout plans."""
     __tablename__ = 'workout_plans'
@@ -46,39 +69,11 @@ class Workout_plan_exercise(db.Model):
     exercise_id = db.Column(db.Integer,
                             db.ForeignKey('exercises.exercise_id'))
 
+    exercises = db.relationship('Exercise', backref = 'workout_plan_exercises') 
+    workout_plans  = db.relationship('Workout_plan', backref = 'workout_plan_exercises')
+
     def __repr__(self):
         return f'<Workout_plan_exercise workout_plan_exercise_id = {self.workout_plan_exercise_id}>'
-
-    
-    exercises = db.relationship ('Exercise', backref = 'workout_plan_exercises') 
-    workout_plans  = db.relationship ('Workout_plan', backref = 'workout_plan_exercises')
-
-
-class Exercise(db.Model):
-    """Exercises.  Information about each exercise."""
-    __tablename__ = 'exercises'
-
-    exercise_id = db.Column(db.Integer,
-                            autoincrement=True,
-                            primary_key=True)
-                           
-    exercise_name = db.Column(db.String)
-    main_muscle_group = db.Column(db.String) 
-    type_of_exercise = db.Column(db.String)
-    difficulty = db.Column(db.String)
-    equipment = db.Column(db.String)
-    instructions = db.Column(db.String)
-    exercise_img1 = db.Column(db.String)
-    exercise_img2 = db.Column(db.String) 
-    reps = db.Column(db.Integer)
-
-    def __repr__(self):
-        return f'<Exercise exercise_id= {self.exercise_id} exercise_name = {self.exercise_name}>'
-
-
-
-
-    
 
 
 def connect_to_db(flask_app, db_uri='postgresql:///exercises', echo=True):
