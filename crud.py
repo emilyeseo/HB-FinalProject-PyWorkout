@@ -17,6 +17,7 @@ def create_user(firstname,lastname,email,password):
 
     return user
 
+    
 def create_exercise(exercise_name, main_muscle_group, type_of_exercise, difficulty, equipment, instructions, exercise_img1, exercise_img2, reps):
     """Create and return a exercise."""
 
@@ -34,6 +35,7 @@ def create_exercise(exercise_name, main_muscle_group, type_of_exercise, difficul
     db.session.commit()
 
     return exercise
+
 
 def create_workout_plan(user_id):
     """Create and return a workout plan."""
@@ -57,6 +59,7 @@ def create_workout_plan_exercise(workout_plan_id, exercise_id):
 
     return workout_plan_exercise
 
+
 def get_exercises():
     """Display and return all exercises"""
 
@@ -68,11 +71,15 @@ def get_user_by_email(email):
 
     return User.query.filter_by(email=email).first()
 
+
 def get_exercises_by_main_group(main_muscle_group):
+    """Display and return exercises by main muscle group"""
 
     return Exercise.query.filter_by(main_muscle_group = main_muscle_group).all()
 
+
 def get_workout_plan_exercises_by_workout_plan_id(workout_plan_id):
+    """Display and return exercises by workout plan id"""
 
     #from database, we are using workout plan exercise class to find the exercise by using workout plan id
     return Workout_plan_exercise.query.filter_by(workout_plan_id = workout_plan_id).all()

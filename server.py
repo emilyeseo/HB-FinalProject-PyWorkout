@@ -16,10 +16,12 @@ def homepage():
     """View homepage"""
     return render_template('homepage.html')
 
+
 # @app.route('/about')
 # def index():
 #     """take me to about page. project details"""
 #     return render_template('about.html')
+
 
 @app.route('/login')
 def login():
@@ -38,14 +40,42 @@ def login():
         flash('User information could not be found')
         return redirect ('/')
 
-        
+
 @app.route('/logout')
 def logout():
 
     session.pop('logged_in_user_id', None)
     flash("Successfully logged out")
         
-    return redirect('/')    
+    return redirect('/')
+
+
+@app.route('/register_user')
+def register_user():
+    """View register user account page"""
+
+    return render_template('create_account_form.html')
+
+
+@app.route('/register_user', method = ['POST'])
+def create_an_account():
+    """ Create a new user. """
+    
+    firstname = request.form.get('firstname')
+    lastname = request.form.get('lastname')
+    email = request.form.get('email')
+    password = request.form.get('password')
+
+    user = crud.get_user_by_email(email)
+
+    if user: 
+        flash('Sorry. This login email already exists. Please try a different email address to register, or login to your exisiting account.')
+    else:
+        crud.create_user(firstname,lastname,email,password)
+        flash('Account succesfully created. Please proceed and log in to your account.')
+
+    return redirect('/')
+
 
 @app.route('/all_exercises')
 def all_exercises():
@@ -54,6 +84,7 @@ def all_exercises():
     exercises = crud.get_exercises()
 
     return render_template('all_exercises.html', exercises = exercises)
+
 
 @app.route('/create_workout_plan_form')
 def create_workout_plan_form():
