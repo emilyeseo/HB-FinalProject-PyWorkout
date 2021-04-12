@@ -17,6 +17,11 @@ def create_user(firstname,lastname,email,password):
 
     return user
 
+def get_user_by_email(email):
+    """Return a user """
+
+    return User.query.filter_by(email=email).first()
+
     
 def create_exercise(exercise_name, main_muscle_group, type_of_exercise, difficulty, equipment, instructions, exercise_img1, exercise_img2, reps):
     """Create and return a exercise."""
@@ -36,6 +41,15 @@ def create_exercise(exercise_name, main_muscle_group, type_of_exercise, difficul
 
     return exercise
 
+def get_exercises():
+    """Display and return all exercises"""
+
+    return Exercise.query.all()
+
+def get_exercise_by_id(exercise_id):
+    """Return a exercise by exercise id"""
+
+    return Exercise.query.get(exercise_id)
 
 def create_workout_plan(user_id):
     """Create and return a workout plan."""
@@ -58,18 +72,6 @@ def create_workout_plan_exercise(workout_plan_id, exercise_id):
     db.session.commit()
 
     return workout_plan_exercise
-
-
-def get_exercises():
-    """Display and return all exercises"""
-
-    return Exercise.query.all()
-
-
-def get_user_by_email(email):
-    """Return a user """
-
-    return User.query.filter_by(email=email).first()
 
 
 def get_exercises_by_main_group(main_muscle_group):
