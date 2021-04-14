@@ -52,6 +52,7 @@ for exercise in exercise_data:
 ## Create 10 Users: each user will have 4 workout plans
 ## Fake data. To debug. 
 for n in range(10):
+    day = 10
     firstname = faker.first_name()
     lastname = faker.last_name()
     email = faker.email(n)
@@ -59,17 +60,19 @@ for n in range(10):
 
     user = crud.create_user(firstname, lastname, email, password)
 
-    user_workout_plan = crud.create_workout_plan(user.user_id)
+    for i in range(3):
+        user_workout_plan = crud.create_workout_plan(user.user_id, date_created = f"2021-04-{day} 23:03:30.173886")
+        
+        users_workout_plan_exercise_list = []
+
+        for j in range(4):
+            workout_plan_exercise = crud.create_workout_plan_exercise(user_workout_plan.workout_plan_id,
+                                                randint(1,10))
+            users_workout_plan_exercise_list.append(workout_plan_exercise)
+        day += 1
 
 
-    users_workout_plan = []
-
-    for i in range(4):
-        workout_plan_exercise = crud.create_workout_plan_exercise(user_workout_plan.workout_plan_id,
-                                            randint(1,10))
-        users_workout_plan.append(workout_plan_exercise)
-
-    print(users_workout_plan)
+ 
 
 
 

@@ -1,6 +1,7 @@
 """CRUD OPERATIONS."""
 from model import db, User, Exercise, Workout_plan_exercise, Workout_plan, connect_to_db
 from random import choice, randint
+from datetime import datetime
 
 
 
@@ -51,15 +52,17 @@ def get_exercise_by_id(exercise_id):
 
     return Exercise.query.get(exercise_id)
 
-def create_workout_plan(user_id):
+def create_workout_plan(user_id, date_created=datetime.today()):
     """Create and return a workout plan."""
     
-    workout_plan = Workout_plan(user_id = user_id)
+    workout_plan = Workout_plan(user_id = user_id, date_created = date_created)
     
     db.session.add(workout_plan)
     db.session.commit()
 
     return workout_plan
+
+
 
 
 def create_workout_plan_exercise(workout_plan_id, exercise_id):
@@ -87,9 +90,10 @@ def get_workout_plan_exercises_by_workout_plan_id(workout_plan_id):
     return Workout_plan_exercise.query.filter_by(workout_plan_id = workout_plan_id).all()
 
 
-    
+def get_workout_plan_by_user_id(user_id):
+    """Display and return workout plan by user id"""
 
-
+    return Workout_plan.query.filter_by(user_id = user_id).all()
 
 
 

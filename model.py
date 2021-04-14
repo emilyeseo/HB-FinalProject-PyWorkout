@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 db = SQLAlchemy()
 
@@ -51,10 +52,15 @@ class Workout_plan(db.Model):
     user_id = db.Column(db.Integer,
                             db.ForeignKey('users.user_id'))
 
+    date_created = db.Column(db.String, nullable = False)
+
     users = db.relationship('User', backref='workout_plans')
+
 
     def __repr__(self):
         return f'<Workout_plan workout_plan_id = {self.workout_plan_id} user_id = {self.user_id}>'
+
+
 
 class Workout_plan_exercise(db.Model):
     """A randomized Workout plan. """

@@ -30,6 +30,8 @@ def login():
 
     user = crud.get_user_by_email(email)
 
+    # new message: email is correct and password is wrong 
+
     if user and password == user.password: 
         
         session['logged_in_user_id'] = user.user_id
@@ -37,11 +39,9 @@ def login():
 
         return redirect('/create_workout_plan_form')
     else: 
-        print(user)
-        print('********')
         flash('User information could not be found')
         return redirect ('/')
-
+        
 
 @app.route('/logout')
 def logout():
@@ -87,6 +87,7 @@ def all_exercises():
     exercises = crud.get_exercises()
 
     return render_template('all_exercises.html', exercises = exercises)
+
 
 @app.route('/exercise/<exercise_id>')
 def exercise_detail(exercise_id):
@@ -144,27 +145,15 @@ def create_workout_plan():
                 random_abs_workout = crud.create_workout_plan_exercise(workout_plan.workout_plan_id, random_abs_exercise.exercise_id)    
 
 
-        #create this crud function
-        #list of four workout plan exercises objects (Workout_plan_exercise class) for the workout_plan_id
+    
         user_list_of_random_exercises = crud.get_workout_plan_exercises_by_workout_plan_id(workout_plan.workout_plan_id)
-        # print("==================")
-        # # print(user_list_of_random_exercises[0]) #first object in our list
-        # # print(user_list_of_random_exercises[0].exercises) #view exercises relationship
-        # print(user_list_of_random_exercises[0].exercises.exercise_name)
-        # print(user_list_of_random_exercises[0].exercises.type_of_exercise)
-        # print(user_list_of_random_exercises[0].exercises.difficulty)
-        # print(user_list_of_random_exercises[0].exercises.instructions)
-        # print("==================")
+       
     
     return render_template("display_workout_plan.html", user_list_of_random_exercises = user_list_of_random_exercises)
 
-
-
-
-# @app.route("/my_workout", method = ["GET"])    
-
-#     return redirect('/myworkout')
-
+@app.route('/your_account')
+def display_workout_plan():
+    
 
 
 if __name__ == '__main__':
