@@ -153,6 +153,67 @@ def create_workout_plan():
 
 @app.route('/your_account')
 def display_workout_plan():
+    """Return and display workout plan by user id"""
+
+    if 'logged_in_user_id' in session:
+        workout_plans_by_user_id = crud.get_workout_plan_by_user_id(session['logged_in_user_id'])
+        workout_history = []
+        
+        # workout_history = [
+        #     {
+        #         'main_muscle': ,
+        #         'date':,
+        #         'exercises':,
+        #     }
+        # ]
+        
+        #iterate through workout_plans_by_user_id (this is a list of workoutplan objects)
+        #for each object, query for workoutplan exercises by workoutplan id
+        for user_workout_plan in workout_plans_by_user_id:
+            exercise_list = crud.get_workout_plan_exercises_by_workout_plan_id(user_workout_plan.workout_plan_id)
+    
+            workout_dict = {}
+            workout_dict['date'] = user_workout_plan.date_created
+            workout_dict['main_muscle'] = exercise_list[0].exercises.main_muscle_group
+            workout_dict['exercises'] = exercise_list
+
+            workout_history.append(workout_dict)            
+            
+            # workout_history.append(exercise_list)
+            
+
+        user =  crud.get_user_by_user_id(session['logged_in_user_id'])
+
+        firstname = user.firstname
+        lastname = user.lastname
+        email = user.email
+
+        return render_template('my_account.html', 
+                                workout_history=workout_history,
+                                firstname=firstname,
+                                lastname=lastname,
+                                email=email )
+    else: 
+        redirect('/login')
+    
+# {% for workout_set in workout_history %}
+# <ul>
+#     {% for exercise in workout_set %}
+#         <li>
+#             {{ exercise.exercises.main_muscle_group }}
+#         </li>
+#     {% endfor %}
+# </ul>
+# {% endfor %}
+
+
+# {% for workout_plan in workout_plans_by_user_id %}
+# <ul>
+    
+#     <li>workout_plan_id Name: {{ workout_plan.workout_plan_id }}</li>
+#     <li>workout_date: {{ workout_plan.date_created }}</li>
+# </ul>
+# {% endfor %}
     
 
 

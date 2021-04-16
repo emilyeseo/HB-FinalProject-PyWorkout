@@ -23,6 +23,10 @@ def get_user_by_email(email):
 
     return User.query.filter_by(email=email).first()
 
+def get_user_by_user_id(user_id):
+
+    return User.query.filter_by(user_id=user_id).first()
+
     
 def create_exercise(exercise_name, main_muscle_group, type_of_exercise, difficulty, equipment, instructions, exercise_img1, exercise_img2, reps):
     """Create and return a exercise."""
@@ -55,7 +59,7 @@ def get_exercise_by_id(exercise_id):
 def create_workout_plan(user_id, date_created=datetime.today()):
     """Create and return a workout plan."""
     
-    workout_plan = Workout_plan(user_id = user_id, date_created = date_created)
+    workout_plan = Workout_plan(user_id=user_id, date_created=date_created)
     
     db.session.add(workout_plan)
     db.session.commit()
