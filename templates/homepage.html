@@ -4,30 +4,27 @@
 {% block body %}
   <h1>What's our workout today?</h1>
   
-
-  <!-- Log in page -->
   <h2>Log In</h2>
 
-  <form action="/login" method = "POST">
+  <form action="/login" method = "POST" id="login-form">
     <p>
-      Email <input type="text" name="email">
+      Email <input id="email" type="text" name="email">
     </p>
 
     <p>
-      Password <input type="text" name="password">
+      Password <input id="password" type="text" name="password">
     </p>
 
     <p>
-      <input id='login-button' type="submit">
+      <button id="login-button" type="submit">log in</button>
     </p>
   </form>
-  
+
   <form action="/register_user">
     <button type="submit" class="submit">Register</button>
   </form>
-  
-  
+{% endblock %}
 
-  
-  
+{% block javascript %}
+    <script src="/static/js/logged_in.js"></script>  
 {% endblock %}

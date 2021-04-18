@@ -3,20 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta name ="viewport" content = "width=device-width">
+
         <title>
             {% block title %} {% endblock %}
         </title>
+
         {% block head %}{% endblock %}
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+        <!-- jquery script tag -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+        crossorigin="anonymous"></script>
+        
     </head>
+
     <body>
         <ul>
-            <li><a href = "/your_account"> My Account </a></li>
-            <li><a href = "/create_workout_plan_form"> Create Workout Plan </a></li>
+            <li><a href="/your_account"> My Account </a></li>
+            <li><a href="/create_workout_plan_form"> Create Workout Plan </a></li>
             <li><a href="/all_exercises">View all Workouts</a></li>
-            <li><a href = "/logout"> Log out</a></li>
-            <li><a href = "/register_user">Register User</a></li>
-
-        
+            <li><a href="/logout"> Log out</a></li>
+            <li><a href="/register_user">Register User</a></li>
             
           </ul>
         {% for message in get_flashed_messages() %}
@@ -24,5 +33,11 @@
         {% endfor %}
 
         {% block body %}{% endblock %}
+
+        <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
+
+        
     </body>
+
+    {% block javascript %}  {% endblock %}
 </html>

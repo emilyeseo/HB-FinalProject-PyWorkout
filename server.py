@@ -35,12 +35,12 @@ def login():
     if user and password == user.password: 
         
         session['logged_in_user_id'] = user.user_id
-        flash('successfully logged in')
+        # flash('successfully logged in')
+        return ('successfully logged in')
 
-        return redirect('/create_workout_plan_form')
-    else: 
-        flash('User information could not be found')
-        return redirect ('/')
+    elif user == user.email and password != user.password: 
+        # flash('User information could not be found')
+        return ('User information could not be found')
         
 
 @app.route('/logout')
@@ -55,6 +55,7 @@ def logout():
 @app.route('/register_user')
 def register_user():
     """View register user account page"""
+    
 
     return render_template('create_account_form.html')
 
@@ -174,7 +175,7 @@ def display_workout_plan():
     
             workout_dict = {}
             workout_dict['date'] = user_workout_plan.date_created
-            workout_dict['main_muscle'] = exercise_list[0].exercises.main_muscle_group
+            workout_dict['main_muscle'] = exercise_list[1].exercises.main_muscle_group
             workout_dict['exercises'] = exercise_list
 
             workout_history.append(workout_dict)            
@@ -194,7 +195,7 @@ def display_workout_plan():
                                 lastname=lastname,
                                 email=email )
     else: 
-        redirect('/login')
+        return redirect('/')
     
 # {% for workout_set in workout_history %}
 # <ul>
