@@ -8,7 +8,47 @@
         "instructions": "1.) To begin this exercise; start off standing on a band, wrapping it around your neck and making sure that it is evenly distributed for stretching in each arm\n2.) Bend at the knees and extend down with your hips then straighten out your legs and come to a vertical position.\n3.) Repeat this exercise for as many repetitions as needed",
         "exercise_img1": "https://www.jefit.com/images/exercises/800_600/1864.jpg",
         "exercise_img2": "https://www.jefit.com/images/exercises/800_600/1865.jpg"
-    }, 
+    },
+    {
+        "exercise_name": "Barbell 1/2 Squat",
+        "main_muscle_group":"Legs",
+        "type_of_exercise":"Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Barbell",
+        "instructions":"1.) Start off setting up a weighted barbell with the amount of weight that you would like to perform.    \n2.) Position the barbell on your shoulders with an overhand wide shoulder width grip just as in a regular squat position.\n3.) Slowly squat down towards the floor about 12 inches, not as much as a regular squat, and hold for a count.\n4.) Return back up to the starting position.\n5.) Repeat for as many reps and sets as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/4884.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/4885.jpg"
+    },
+    {
+        "exercise_name": "Squat to Shoulder Press",
+        "main_muscle_group": "Legs",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Barbell",
+        "instructions":"1.) Start off by standing with your feet shoulder width apart, holding a barbell across your back.\n2.) Slowly squat down under control keeping your knees bent over your toes and press the barbell over your head extending your arms straight up.\n3.) Hold this position as soon as you feel a stretch in your thighs and glutes for a count then return back up to the starting position.\n4.) Repeat for as many reps and sets as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3004.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3005.jpg"
+    },
+    {
+        "exercise_name": "Hamstring Curl",
+        "main_muscle_group": "Legs",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Dumbbell",
+        "instructions":"1.) Start off by setting up an elevated flat bench on either a block or step and making sure that your resting point is secure.        \n2.) Lie face down on the bench, placing a dumbbell at the lower end of the bench so that you will be able to grab it in between your feet, and that your knees are at the edge of the bench.\n3.) Pick the dumbbell up off of the floor with your feet, keeping your legs fully extended, and slowly curl the dumbbell up towards your buttocks by bending your knees.\n4.) Hold for a count when you feel a stretch in your hamstrings then return back to the starting position.\n5.) Repeat for as many reps and sets as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/4792.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/4793.jpg"
+    },
+    {
+        "exercise_name": "Barbell Standing Calf Raise",
+        "main_muscle_group": "Legs",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Dumbbell",
+        "instructions":"1.) Start of by placing a block or two free weight plates on the floor, then placing a weighted barbell across your back and step up so that the balls of your feet are on the block.\n2.) Slowly lift your heels up off of the floor and then lower them back so that you feel as much of a stretch as possible in your calf muscles.\n3.) Return to the starting position and repeat for as many reps and sets as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/572.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/573.jpg"
+    },
     {
         "exercise_name": "Band Squat",
         "main_muscle_group":"Legs",
@@ -16,8 +56,8 @@
         "difficulty": "Beginner",
         "equipment": "Bands" , 
         "instructions": "1.) Start off standing with your feet on the exercise bands with your feet shoulder width apart.\n2.) Grab onto the handles of the bands and pull them up to your shoulders in a slow and controlled motion.\n3.) With your abs drawn in, squat down until your thighs are parallel with the floor.\n4.) Slowly return to the starting position.\n5.) Repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/860.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/861.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/860.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/861.jpg"
     }, 
     {
         "exercise_name": "Dumbbell Lunges",
@@ -66,8 +106,8 @@
         "difficulty": "Intermediate", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off standing up straight with your feet shoulder width apart and your arms at your sides with a dumbbell in each hand.\n2.) While keeping your knees still, slowly lower your upper body and the dumbbells towards the floor over your feet.\n3.) Keep moving your body forward until you feel a stretch in your hamstrings then hold for a count.\n4.) Return back to the starting position by extending through your hips until you are at the start.\n5.) Repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3820.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3821.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3820.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3821.jpg"
     },
     {
         "exercise_name": "Dumbbell One Leg Squat",
@@ -76,8 +116,8 @@
         "difficulty": "Intermediate", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off setting up a horizontal flat bench behind you, placing one of your legs behind you in the middle of the bench and holding a dumbbell in each hand as this will be your starting position.\n2.) Cross your arms in front of you and slowly lower your body down towards the floor, bending with your front leg until your knee is parallel with the floor and hold for a count.\n3.) Return back to the starting position.\n4.) Repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/4848.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/4849.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/4848.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/4849.jpg"
     },
     {
         "exercise_name": "Dumbbell Walking Lunges",
@@ -86,8 +126,8 @@
         "difficulty": "Intermediate", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off by either placing a barbell across your upper back or by grasping a dumbbell in each hand.\n2.) Stand with your feet about 8 inches apart, toes facing forward.\n3.) Take a lunge forward keeping your abs drawn in and your upper body straight.\n4.) Slowly lower one knee down as if kneeling while keeping your other knee bent at a 90 degree angle.\n5.) Lower your body to just above the floor and hold for a moment before pushing off with the back foot.\n6.) Step through and repeat the exercise with the other leg.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/804.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/805.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/804.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/805.jpg"
     },
     {
         "exercise_name": "Spine Twist",
@@ -96,8 +136,8 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) Start off by sitting up straight on the floor with your legs extended out in front of you with your inner thighs touching.\n2.) Take your arms and cross them over your chest.\n3.) Once in position, lift out through your hips and slowly turn to one side using your abdominals and hold for a few seconds.\n4.) Return back to the starting position and then repeat in the opposite direction.\n5.) Repeat for as many reps and sets desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2724.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2725.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2724.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2725.jpg"
     },
     {
         "exercise_name": "Superman",
@@ -106,8 +146,8 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) Start off lying flat on your stomach with your arms stretched out in front of you.\n2.) Slowly raise your arms and legs up off of the floor and hold onto this position for a few seconds until you feel a tight stretch in your core and back muscles.\n3.) Return back to the starting position.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/376.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/377.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/376.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/377.jpg"
     },
     {
         "exercise_name": "Dumbbell Palms In Bent Over Row",
@@ -116,9 +156,10 @@
         "difficulty": "Intermediate", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off standing up straight with your feet shoulder width apart and a dumbbell in each hand holding with a neutral grip.\n2.) Slowly and slightly lower your back towards the ground so you feel tension in your lower back and then slowly elevate the dumbbells up towards your chest.\n3.) Squeeze your back in the process, hold for a count then return back to the starting position.\n4.) Repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3232.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3233.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3232.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3233.jpg"
     },
+
     {
         "exercise_name": "Dumbbell Bent Over Row",
         "main_muscle_group": "Back",
@@ -126,8 +167,8 @@
         "difficulty": "Beginner", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off holding a dumbbell in each hand with palms facing towards you, bending slightly at your knees and at your torso as if you were to pick up something.\n2.) Hold you arms straight down with a weight in each hand and then slowly lift the dumbbells to your sides.\n3.) Once at the top position hold for a count while squeezing your back muscles and then return back to the starting position.\n4.) Repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/352.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/353.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/352.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/353.jpg"
     },
     {
         "exercise_name": "Dumbbell Deadlift",
@@ -136,8 +177,58 @@
         "difficulty": "Beginner", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off by grabbing 2 dumbbells with an overhand grip and stand with your feet shoulder width apart.\n2.) Keeping your back straight bend at the waist, allow some bend in your knees.\n3.) Straighten your back as you hold the dumbbells at arms length.\n4.) Bend over again lowering the dumbbells to just above the floor.\n5.) Return to starting position and repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/772.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/773.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/772.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/773.jpg"
+    },
+    {
+        "exercise_name": "Back Relaxation",
+        "main_muscle_group": "Back",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Ball",
+        "instructions":"1.) Take an exercise ball and lie face up on it with your knees bent and feet on the floor.\n2.) Extend your body and relax your back on the ball, easing your arms behind your head.\n3.) Hold this position for 5 to 10 minutes to allow your muscles to relax and stretch.\n4.) Return back to the starting position.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2176.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2176.jpg"
+    },
+    {
+        "exercise_name": "Bar Pull Up",
+        "main_muscle_group": "Back",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Bar",
+        "instructions":"1.) Start off by grasping the pull up bar with an overhand grip so that your palms are facing forward.\n2.) Once you have a hold of the bar, let your body hang keeping your arms straight, as this will be your starting position.\n3.) Then slowly pull yourself up so that your chin is higher than the bar and once in the top position hold for a count.\n4.) Using a controlled motion, lower yourself back down to the starting position.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/324.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/325.jpg"
+    },
+    {
+        "exercise_name": "Upward Facing Dog",
+        "main_muscle_group": "Back",
+        "type_of_exercise": "Stretching",
+        "difficulty": "Beginner", 
+        "equipment": "Body Only",
+        "instructions":"1.) Start off by laying facedown with your forehead touching the floor and keeping your feet close together.\n2.) Keep your fingertips at shoulder level, raise your elbows up in the air then slide your shoulder blades down towards your hips.\n3.) Then straighten out your arms, lift up your head, shoulders and chest up towards the ceiling.\n4.) Hold this position for 5 to 10 breaths and return back to the starting position.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2152.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2153.jpg"
+    },
+    {
+        "exercise_name": "Reverse Lying T Bar Machine Row",
+        "main_muscle_group": "Back",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Machine",
+        "instructions":"1.) Start off setting up a T-Bar Row machine with the amount of weight that you want to use to perform this exercise.\n2.) Lay down with your chest flat on the pad in front of you, legs behind on the foot rests and grabbing onto the handles with an underhand reverse grip.\n3.) Slowly pull the bar up towards your chest, bringing the handles to your sides, squeezing with your back and lat muscles.\n4.) Hold for a count then return back to the starting position.\n5.) Repeat for as many reps and sets as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/5244.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/5245.jpg"
+    },
+    {
+        "exercise_name": "Side-Lying Floor Stretch",
+        "main_muscle_group": "Back",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Body only",
+        "instructions":"1.) Start off laying on your side, keeping your one knee slightly bent in front of you and the other extended out behind the bent.\n2.) Extend your arms out over your head, hands on top of each other, reaching out above you.\n3.) Hold this position for 15 to 30 seconds and then release.\n4.) Repeat for as many reps and duration as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3320.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3321.jpg"
     },
     {
         "exercise_name": "Ab Draw Leg Slide",
@@ -146,8 +237,8 @@
         "difficulty": "Intermediate", 
         "equipment": "Body Only",
         "instructions": "1.) Start off laying on your back with your knees bent at 90 degrees and keeping your arms at your sides, palms up.\n2.) Maintaining slight pressure on your hands, extend your legs slowly forward so that you feel a stretch and squeeze on your abdominals.\n3.) Return back to the starting position and repeat for as many reps and sets desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2680.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2681.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2680.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2681.jpg"
     },
     {
         "exercise_name": "Abdominal Pendulum",
@@ -156,8 +247,8 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) Start off by laying with your back flat on the floor, your legs together extended out in front of you and your hands placed out to your sides so that you are in a Tposition.\n2.) Slowly lift your legs up and over your body so that you are creating a right angle to the floor, then twisting only at your hips, lower your feet slowly to the floor to your right without losing any control.\n3.) As soon as you feel a stretch in your obliques, return to the starting position and repeat on the opposite side.\n4.) Repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3870.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3869.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3870.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3869.jpg"
     },
     {
         "exercise_name": "Ab Draw Leg Slide",
@@ -166,8 +257,8 @@
         "difficulty": "Intermediate", 
         "equipment": "Body Only",
         "instructions": "1.) Start off laying on your back with your knees bent at 90 degrees and keeping your arms at your sides, palms up.\n2.) Maintaining slight pressure on your hands, extend your legs slowly forward so that you feel a stretch and squeeze on your abdominals.\n3.) Return back to the starting position and repeat for as many reps and sets desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2680.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2681.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2680.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2681.jpg"
     },
     {
         "exercise_name": "Air Bike",
@@ -196,8 +287,8 @@
         "difficulty": "Beginner", 
         "equipment": "Dumbbell",
         "instructions": "1.) Start off standing with your feet shoulder width apart and your knees slightly bent holding a dumbbell over your head to one side of your body.\n2.) Slowly bring the dumbbell down in a diagonal direction, pressing the weight into your opposite thigh, squeezing your oblique muscles.\n3.) Return back to the starting position and repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2972.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2973.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2972.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2973.jpg"
     },
     {
         "exercise_name": "V Ups",
@@ -206,8 +297,8 @@
         "difficulty": "Intermediate", 
         "equipment": "Body Only",
         "instructions": "1.) Start off laying on a mat with your legs extended out towards the ceiling and slightly apart.\n2.) Extend your hands above your head and in front of your chest.\n3.) Squeeze with your abs and reach up with your arms in between your legs and hold this position for a few seconds.\n4.) Return back to the starting position and then repeat for the desired number of reps and sets.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2744.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2745.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2744.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2745.jpg"
     },
     {
         "exercise_name": "Dumbell Twist",
@@ -216,8 +307,8 @@
         "difficulty": "Intermediate", 
         "equipment": "dumbbell",
         "instructions": "1.) Lie on a mat or floor.\n2.) While sitting up extend your knees out and slightly bend.\n3.) Your feet should be a few inches off the ground.\n4.) Grab a dumbbell and rotate it form one side of your chest to the other side while maintaining your body position.\n5.) Repeat for the desired amount of reps.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3992.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3993.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3992.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3993.jpg"
     },
     {
         "exercise_name": "Dumbell Twist",
@@ -226,8 +317,8 @@
         "difficulty": "Intermediate", 
         "equipment": "dumbbell",
         "instructions": "1.) Lie on a mat or floor.\n2.) While sitting up extend your knees out and slightly bend.\n3.) Your feet should be a few inches off the ground.\n4.) Grab a dumbbell and rotate it form one side of your chest to the other side while maintaining your body position.\n5.) Repeat for the desired amount of reps.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3992.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3993.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/3992.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/3993.jpg"
     },
     {
         "exercise_name": "Glute Kickback",
@@ -236,8 +327,8 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) To begin this exercise; start off with your knees on the floor in a kneeling push-up position.\n2.) Raise your right leg until your hamstrings are parallel with your back maintaining the 90-degree level squeezing your glutes throughout the movement.\n3.) Hold this position for a few seconds and return back to the starting position followed by alternating the exercises with the other leg.\n4.) Repeat this exercise for as many repetitions as needed.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/1548.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/1549.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/1548.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/1549.jpg"
     },
     {
         "exercise_name": "Flutter Kick",
@@ -246,8 +337,8 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) Start off standing at a leg curl machine adjust the rear footpad so it is just above your ankle.\n2.) Grasp the handles of the machine for support and draw your abs in.\n3.) Raise your foot up towards your back slowly in a controlled manner.\n4.) Return to the starting position and change legs.\n5.) Repeat for as many reps and sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/792.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/793.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/792.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/793.jpg"
     },
     {
         "exercise_name": "Bridge",
@@ -256,8 +347,8 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) Start off lying on your back with your knees bent and your feet flat on the floor.\n2.) Lift up your hips off the floor as you draw your abs in and keep your glutes tight.\n3.) Hold the position for a count then return back to the start.\n4.) Repeat for as many sets as desired.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/776.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/777.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/776.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/777.jpg"
     },
     {
         "exercise_name": "Leg Lift",
@@ -266,8 +357,8 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) Start off either using a post or tall weight bench for balance stand straight with your abs drawn in.\n2.) Raise one leg off of the ground and extend it behind you while standing and stabilizing on the other leg.\n3.) Slowly lower the leg and raise it again while flexing the glutes.\n4.) Repeat with your other leg.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/780.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/781.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/780.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/781.jpg"
     },
     {
         "exercise_name": "One Knee to Chest",
@@ -276,7 +367,48 @@
         "difficulty": "Beginner", 
         "equipment": "Body Only",
         "instructions": "1.) To begin this exercise; start off laying down with your back flat on the floor and knees bent as in a standard sit-up position.\n2.) Push your right leg out and straight followed by taking your left knee and pulling it tightly to your chest bringing the knee as close as you can to your head.\n3.) Repeat this exercise for as many repetitions as needed.", 
-        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/1568.jpg",
-        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/1569.jpg"
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/1568.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/1569.jpg"
+    },
+    {
+        "exercise_name": "Band Hip Lift",
+        "main_muscle_group": "Glutes",
+        "type_of_exercise": "Powerlifting",
+        "difficulty": "Beginner", 
+        "equipment": "Bands",
+        "instructions": "1.) To begin this exercise; take a band and secure it underneath two dumbbells so that they wont move.\n2.) Move your body so that your hips are right under the bands and set up for a basic sit up position with your knees up and feet firm on the floor.\n3.) Keep your hands extended behind your head.\n4.) Push your shoulders to the floor as you raise your hips and extend the band as high as possible.\n5.) Hold onto the position for a few seconds and return to the start.\n6.) Repeat this exercise for as many repetitions as needed.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/1552.jpg",,
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/1553.jpg"
+    },
+    {
+        "exercise_name": "Cable Pull Through",
+        "main_muscle_group": "Glutes",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Bands",
+        "instructions":"1.) To begin this exercise; start off standing only a few feet from the cable machine holding the rope in between your legs just underneath your glutes.\n2.) Then take the rope, keeping your knees slightly bent, pull the rope through with only the use of your hips.\n3.) Refrain from using your shoulders or arms to pull.\n4.) Repeat this exercise for as many repetitions as needed.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/1572.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/1573.jpg"
+    },
+    {
+        "exercise_name": "Exercise Ball One Legged Diagonal Kick Hamstring Curl",
+        "main_muscle_group": "Glutes",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Ball",
+        "instructions":"1.) Start off by laying flat on your back with both feet on an exercise ball, keeping your arms flat on the floor by your side.\n2.) Bend your your knees and curl your heels toward your glutes, then kick up one leg diagonally.\n3.) Hold this position for a few seconds then return back to the starting position.\n4.) Repeat with the opposite leg for as many reps and sets as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2552.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2553.jpg"
+    },
+    {
+        "exercise_name": "Straight Leg Outer Hip Abductor",
+        "main_muscle_group": "Glutes",
+        "type_of_exercise": "Strength",
+        "difficulty": "Beginner", 
+        "equipment": "Body Only",
+        "instructions":"1.) Start off standing up straight with your arms down by your sides.\n2.) Slowly cross one of your legs behind you then flexing away with your upper body away from the stretched leg until you feel tension in your hips and legs.\n3.) Hold for about 15 to 30 seconds and repeat for as many reps and sets as desired.", 
+        "exercise_img1":"https://www.jefit.com/images/exercises/800_600/2988.jpg",
+        "exercise_img2":"https://www.jefit.com/images/exercises/800_600/2989.jpg"
     }
+    
 ]

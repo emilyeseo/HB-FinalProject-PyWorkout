@@ -38,9 +38,11 @@ def login():
         # flash('successfully logged in')
         return ('successfully logged in')
 
-    elif user == user.email and password != user.password: 
+    elif user and password != user.password: 
         # flash('User information could not be found')
-        return ('User information could not be found')
+        return ('Wrong password. Try again.')
+
+
         
 
 @app.route('/logout')
@@ -72,8 +74,8 @@ def create_an_account():
     user = crud.get_user_by_email(email)
 
     if user: 
-        flash('Sorry. This login email already exists. Please try a different email address to register, or login to your exisiting account.')
-        return redirect('/register_user')
+        # flash('Sorry. This login email already exists. Please try a different email address to register, or login to your exisiting account.')
+        return ('Sorry. This login email already exists. Please try a different email address to register, or login to your exisiting account.')
     else:
         crud.create_user(firstname,lastname,email,password)
         flash('Account succesfully created. Please proceed and log in to your account.')
@@ -196,25 +198,6 @@ def display_workout_plan():
                                 email=email )
     else: 
         return redirect('/')
-    
-# {% for workout_set in workout_history %}
-# <ul>
-#     {% for exercise in workout_set %}
-#         <li>
-#             {{ exercise.exercises.main_muscle_group }}
-#         </li>
-#     {% endfor %}
-# </ul>
-# {% endfor %}
-
-
-# {% for workout_plan in workout_plans_by_user_id %}
-# <ul>
-    
-#     <li>workout_plan_id Name: {{ workout_plan.workout_plan_id }}</li>
-#     <li>workout_date: {{ workout_plan.date_created }}</li>
-# </ul>
-# {% endfor %}
     
 
 
