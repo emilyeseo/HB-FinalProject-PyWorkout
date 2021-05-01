@@ -2,29 +2,42 @@
 {% block title %}Let me plan a workout for you!{% endblock %}
 
 {% block body %}
-  <h1>What's our workout today?</h1>
-  
-  <h2>Log In</h2>
 
-  <form action="/login" method = "POST" id="login-form">
-    <p>
-      Email <input id="email" type="text" name="email">
-    </p>
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+    <div id="signin-form" class="row">
+        <form action="/login" method="POST" id="login-form" class="login-form">
 
-    <p>
-      Password <input id="password" type="password" name="password">
-    </p>
+            <div class="text-center mb-4"> 
+                <img class="mt-4 mb-4" src="static/img/logo.jpg" alt="website logo" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            </div>
 
-    <p>
-      <button id="login-button" type="submit">log in</button>
-    </p>
-  </form>
+            <div class="form-label-group">
+                <input id="email" class="form-control" type="email" name="email" placeholder="email" required autofocus>
+            </div>
 
-  <form action="/register_user">
-    <button type="submit" class="submit">Register</button>
-  </form>
+            <div class="form-label-group">
+                <input id="password" class="form-control" type="password" name="password" placeholder="password" required>
+                
+            </div>
+
+            <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+                <button id="login-button" type="submit" class="btn btn-lg btn-primary btn-block submit">Log in</button>
+                
+                <p class="mt-5 mb-3 text-muted text-center">&copy; Hackbright Academy - Emily Seo</p>
+        </form>
+    </div>
+    </div>
+</div>
+
 {% endblock %}
 
+
 {% block javascript %}
-    <script src="/static/js/logged_in.js"></script>  
+<script src="/static/js/logged_in.js"></script>  
 {% endblock %}

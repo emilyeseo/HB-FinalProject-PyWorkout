@@ -3,8 +3,6 @@ from model import db, User, Exercise, Workout_plan_exercise, Workout_plan, conne
 from random import choice, randint
 from datetime import datetime
 
-
-
 def create_user(firstname,lastname,email,password):
     """Create and return a new user."""
 
@@ -67,8 +65,6 @@ def create_workout_plan(user_id, date_created=datetime.today()):
     return workout_plan
 
 
-
-
 def create_workout_plan_exercise(workout_plan_id, exercise_id):
     """Create and return a workout plan exercise."""
     
@@ -80,12 +76,10 @@ def create_workout_plan_exercise(workout_plan_id, exercise_id):
 
     return workout_plan_exercise
 
-
 def get_exercises_by_main_group(main_muscle_group):
     """Display and return exercises by main muscle group"""
 
     return Exercise.query.filter_by(main_muscle_group = main_muscle_group).all()
-
 
 def get_workout_plan_exercises_by_workout_plan_id(workout_plan_id):
     """Display and return exercises by workout plan id"""
@@ -98,12 +92,6 @@ def get_workout_plan_by_user_id(user_id):
     """Display and return workout plan by user id"""
 
     return Workout_plan.query.filter_by(user_id = user_id).all()
-
-
-
-    
-    
-   
 
 if __name__ == '__main__':
     from server import app

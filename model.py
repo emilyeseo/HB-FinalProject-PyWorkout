@@ -3,6 +3,7 @@ from datetime import datetime
 
 db = SQLAlchemy()
 
+
 class User(db.Model):
     """Users"""
     __tablename__ = 'users'
@@ -12,9 +13,9 @@ class User(db.Model):
                         primary_key=True)
     firstname = db.Column(db.String)
     lastname = db.Column(db.String)
-    email = db.Column(db.String, 
-                    unique = True)
-    password = db.Column(db.String)    
+    email = db.Column(db.String,
+                      unique=True)
+    password = db.Column(db.String)
 
     def __repr__(self):
         return f'<User user_id= {self.user_id} email = {self.email}>'
@@ -27,15 +28,15 @@ class Exercise(db.Model):
     exercise_id = db.Column(db.Integer,
                             autoincrement=True,
                             primary_key=True)
-                           
+
     exercise_name = db.Column(db.String)
-    main_muscle_group = db.Column(db.String) 
+    main_muscle_group = db.Column(db.String)
     type_of_exercise = db.Column(db.String)
     difficulty = db.Column(db.String)
     equipment = db.Column(db.String)
     instructions = db.Column(db.String)
     exercise_img1 = db.Column(db.String)
-    exercise_img2 = db.Column(db.String) 
+    exercise_img2 = db.Column(db.String)
     reps = db.Column(db.Integer)
 
     def __repr__(self):
@@ -47,19 +48,17 @@ class Workout_plan(db.Model):
     __tablename__ = 'workout_plans'
 
     workout_plan_id = db.Column(db.Integer,
-                            autoincrement=True,
-                            primary_key=True)
+                                autoincrement=True,
+                                primary_key=True)
     user_id = db.Column(db.Integer,
-                            db.ForeignKey('users.user_id'))
+                        db.ForeignKey('users.user_id'))
 
-    date_created = db.Column(db.String, nullable = False)
+    date_created = db.Column(db.String, nullable=False)
 
     users = db.relationship('User', backref='workout_plans')
 
-
     def __repr__(self):
         return f'<Workout_plan workout_plan_id = {self.workout_plan_id} user_id = {self.user_id}>'
-
 
 
 class Workout_plan_exercise(db.Model):
@@ -68,15 +67,16 @@ class Workout_plan_exercise(db.Model):
     __tablename__ = 'workout_plan_exercises'
 
     workout_plan_exercise_id = db.Column(db.Integer,
-                                        autoincrement = True,
-                                        primary_key=True)
+                                         autoincrement=True,
+                                         primary_key=True)
     workout_plan_id = db.Column(db.Integer,
                                 db.ForeignKey('workout_plans.workout_plan_id'))
     exercise_id = db.Column(db.Integer,
                             db.ForeignKey('exercises.exercise_id'))
 
-    exercises = db.relationship('Exercise', backref = 'workout_plan_exercises') 
-    workout_plans  = db.relationship('Workout_plan', backref = 'workout_plan_exercises')
+    exercises = db.relationship('Exercise', backref='workout_plan_exercises')
+    workout_plans = db.relationship(
+        'Workout_plan', backref='workout_plan_exercises')
 
     def __repr__(self):
         return f'<Workout_plan_exercise workout_plan_exercise_id = {self.workout_plan_exercise_id}>'
@@ -91,6 +91,7 @@ def connect_to_db(flask_app, db_uri='postgresql:///exercises', echo=True):
     db.init_app(flask_app)
 
     print('Connected to the db!')
+
 
 if __name__ == '__main__':
     from server import app

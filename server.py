@@ -6,6 +6,7 @@ from random import choice
 import crud
 from send_sms import client
 
+
 app = Flask(__name__)
 app.secret_key = "SecretKey"
 app.jinja_env.undefined = StrictUndefined
@@ -15,12 +16,6 @@ app.jinja_env.undefined = StrictUndefined
 def homepage():
     """View homepage"""
     return render_template('homepage.html')
-
-
-# @app.route('/about')
-# def index():
-#     """take me to about page. project details"""
-#     return render_template('about.html')
 
 
 @app.route('/login', methods=['POST'])
@@ -74,10 +69,8 @@ def create_an_account():
         # flash('Sorry. This login email already exists. Please try a different email address to register, or login to your exisiting account.')
         return ('Sorry. This login email already exists. Please try a different email address to register, or login to your exisiting account.')
     else:
-        crud.create_user(firstname, lastname, email, password)
-        flash('Account succesfully created. Please proceed and log in to your account.')
-
-    return redirect('/')
+        user = crud.create_user(firstname, lastname, email, password)
+        return ('Account succesfully created. Please proceed and log in to your account.')
 
 
 @app.route('/all_exercises')
@@ -122,56 +115,54 @@ def create_workout_plan():
         if main_muscle_group == 'back':
             exercises = crud.get_exercises_by_main_group(
                 'Back')  # list of back exercise objects
-
-            for i in range(4):
+            for i in range(1, 4):
                 # using random library choice
                 random_back_exercise = choice(exercises)
-                random_back_workout = crud.create_workout_plan_exercise(
+                random_workout_plan = crud.create_workout_plan_exercise(
                     workout_plan.workout_plan_id, random_back_exercise.exercise_id)
 
         elif main_muscle_group == 'legs':
             exercises = crud.get_exercises_by_main_group('Legs')
-            for i in range(4):
+            for i in range(1, 4):
                 random_leg_exercise = choice(exercises)
-                random_leg_workout = crud.create_workout_plan_exercise(
+                random_workout_plan = crud.create_workout_plan_exercise(
                     workout_plan.workout_plan_id, random_leg_exercise.exercise_id)
 
         elif main_muscle_group == 'glutes':
             exercises = crud.get_exercises_by_main_group('Glutes')
-            for i in range(4):
+            for i in range(1, 4):
                 random_glute_exercise = choice(exercises)
-                random_glute_workout = crud.create_workout_plan_exercise(
+                random_workout_plan = crud.create_workout_plan_exercise(
                     workout_plan.workout_plan_id, random_glute_exercise.exercise_id)
 
         elif main_muscle_group == 'abs':
             exercises = crud.get_exercises_by_main_group('Abs')
-            for i in range(4):
+            for i in range(1, 4):
                 random_abs_exercise = choice(exercises)
-                random_abs_workout = crud.create_workout_plan_exercise(
+                random_workout_plan = crud.create_workout_plan_exercise(
                     workout_plan.workout_plan_id, random_abs_exercise.exercise_id)
 
         user_list_of_random_exercises = crud.get_workout_plan_exercises_by_workout_plan_id(
-            workout_plan.workout_plan_id)
+            random_workout_plan.workout_plan_id)
 
-    return render_template("display_workout_plan.html", user_list_of_random_exercises=user_list_of_random_exercises)
+        return render_template("display_workout_plan.html", user_list_of_random_exercises=user_list_of_random_exercises)
+    else:
+        return redirect("/")
 
 
-@app.route('/send_sms/<workout_plan_id>')
-def send_text_message(workout_plan_id):
+@app.route('/send-sms', methods=['POST'])
+def send_text_message():
     """Send workout plan to user's cell phone"""
 
-    workout_plan_exercises = crud.get_workout_plan_exercises_by_workout_plan_id(
-        workout_plan_id)
+    # import pdb
+    # pdb.set_trace()
 
-    exercise_list = []
+    exercise_plan = request.form.getlist('names[]')
 
-    for exercise in workout_plan_exercises:
-        exercise_list.append(exercise.exercises.exercise_name)
-
-    print(exercise_list)
+    exercise_names = "\n".join(exercise_plan)
 
     client.messages.create(
-        body=exercise_list, from_='+12143937243', to='+12146095612')
+        body=exercise_names, from_='+12143937243', to='+12146095612')
     # workout_plan_id will already be stored in this route
 
     # things to do
@@ -179,7 +170,7 @@ def send_text_message(workout_plan_id):
     # make the route connected to the button.
     # make sure button can determine which "workout_plan_id" is calling.
 
-    return redirect('/')
+    return "success"
 
 
 @app.route('/your_account')
@@ -191,16 +182,6 @@ def display_workout_plan():
             session['logged_in_user_id'])
         workout_history = []
 
-        # workout_history = [
-        #     {
-        #         'main_muscle': ,
-        #         'date':,
-        #         'exercises':,
-        #     }
-        # ]
-
-        # iterate through workout_plans_by_user_id (this is a list of workoutplan objects)
-        # for each object, query for workoutplan exercises by workoutplan id
         for user_workout_plan in workout_plans_by_user_id:
             exercise_list = crud.get_workout_plan_exercises_by_workout_plan_id(
                 user_workout_plan.workout_plan_id)
