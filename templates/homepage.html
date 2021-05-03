@@ -5,33 +5,34 @@
 
 <div class="container">
     <div class="row justify-content-center align-items-center">
-    <div id="signin-form" class="row">
-        <form action="/login" method="POST" id="login-form" class="login-form">
+        <div class="col">
+            <div id="signin-form">
+                <form action="/login" method="POST" id="login-form" class="login-form formContainer">
 
-            <div class="text-center mb-4"> 
-                <img class="mt-4 mb-4" src="static/img/logo.jpg" alt="website logo" width="72" height="72">
-                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            </div>
+                    <div class="text-center mb-4"> 
+                        <img class="mt-4 mb-4" src="static/img/logo.jpg" alt="website logo" width="72" height="72">
+                        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                    </div>
 
-            <div class="form-label-group">
-                <input id="email" class="form-control" type="email" name="email" placeholder="email" required autofocus>
-            </div>
+                    <div class="form-label-group">
+                        <input id="email" class="form-control" type="email" name="email" placeholder="email" required autofocus>
+                    </div>
 
-            <div class="form-label-group">
-                <input id="password" class="form-control" type="password" name="password" placeholder="password" required>
-                
-            </div>
+                    <div class="form-label-group">
+                        <input id="password" class="form-control" type="password" name="password" placeholder="password" required>
+                        
+                    </div>
 
-            <div class="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
+                    <div class="checkbox mb-3">
+                        <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                        <button id="login-button" type="submit" class="btn btn-lg btn-primary btn-block submit">Log in</button>
+                        <p class="mt-5 mb-3 text-muted text-center">&copy; Hackbright Academy - Emily Seo</p>
+                </form>
             </div>
-                <button id="login-button" type="submit" class="btn btn-lg btn-primary btn-block submit">Log in</button>
-                
-                <p class="mt-5 mb-3 text-muted text-center">&copy; Hackbright Academy - Emily Seo</p>
-        </form>
-    </div>
+        </div>
     </div>
 </div>
 

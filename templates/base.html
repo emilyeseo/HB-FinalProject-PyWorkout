@@ -1,76 +1,102 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name ="viewport" content = "width=device-width">
 
-        <title>
-            {% block title %} {% endblock %}
-        </title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-        {% block head %}{% endblock %}
-        <!-- Load Bootstrap 4 -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
-        <!-- Load Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
 
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    {% block head %}{% endblock %}
+    <!-- Load Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <!-- Load my stylesheet -->
-        <link rel="stylesheet" href="/static/css/styles.css">
-    </head>
+    <!-- Load Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Load my stylesheet -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
 
 <body>
+    <div class="container-fluid background" >
+        <div class="row">
+            <div class="col">
 
-    <nav class="navbar navbar-dark navbar navbar-expand-lg" style="background-color: #4729ce;">
-        <a id="brand-logo" class="navbar-brand" href="/">Workout Creator</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <nav class="navbar navbar-dark navbar navbar-expand-lg" >
+                    <a id="brand-logo" class="navbar-brand" href="/">Workout Creator</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/your_account">My Account</a>
-                </li>
-            </ul>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/my_account">My Account</a>
+                            </li>
+                        </ul>
 
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" >
-                    <a class="nav-link" href="/create_workout_plan_form">Create Workout Plan</a>
-                </li>
-                <li class="nav-item" >
-                    <a class="nav-link" href="/register_user">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/all_exercises">View all Workouts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">Log out</a>
-                </li>
-            </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/create_workout_plan_form">Create Workout Plan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register_user">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/all_exercises">View all Workouts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+
+                {% for message in get_flashed_messages() %}
+                {{ message }}
+                {% endfor %}
+
+
+
+                {% block body %}
+                 
+                
+                
+                {% endblock %}
+
+
+                <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
+                <script src="https://code.jquery.com/jquery-3.6.0.js"
+                    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+                
+
+                <!-- Script tags from getbootstrap.com -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                    crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                    crossorigin="anonymous"></script>
+            </div>
         </div>
-    </nav>
-
-    
-
-    {% for message in get_flashed_messages() %}
-        {{ message }}
-    {% endfor %}
-
-    {% block body %}{% endblock %}
-
-
-    <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-    <!-- Script tags from getbootstrap.com -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    </div>
 </body>
 
-    {% block javascript %}  {% endblock %}
+
+
+
+{% block javascript %} {% endblock %}
+
 </html>

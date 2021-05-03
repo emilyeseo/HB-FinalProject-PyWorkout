@@ -115,7 +115,7 @@ def create_workout_plan():
         if main_muscle_group == 'back':
             exercises = crud.get_exercises_by_main_group(
                 'Back')  # list of back exercise objects
-            for i in range(1, 4):
+            for i in range(0, 4):
                 # using random library choice
                 random_back_exercise = choice(exercises)
                 random_workout_plan = crud.create_workout_plan_exercise(
@@ -123,21 +123,21 @@ def create_workout_plan():
 
         elif main_muscle_group == 'legs':
             exercises = crud.get_exercises_by_main_group('Legs')
-            for i in range(1, 4):
+            for i in range(0, 4):
                 random_leg_exercise = choice(exercises)
                 random_workout_plan = crud.create_workout_plan_exercise(
                     workout_plan.workout_plan_id, random_leg_exercise.exercise_id)
 
         elif main_muscle_group == 'glutes':
             exercises = crud.get_exercises_by_main_group('Glutes')
-            for i in range(1, 4):
+            for i in range(0, 4):
                 random_glute_exercise = choice(exercises)
                 random_workout_plan = crud.create_workout_plan_exercise(
                     workout_plan.workout_plan_id, random_glute_exercise.exercise_id)
 
         elif main_muscle_group == 'abs':
             exercises = crud.get_exercises_by_main_group('Abs')
-            for i in range(1, 4):
+            for i in range(0, 4):
                 random_abs_exercise = choice(exercises)
                 random_workout_plan = crud.create_workout_plan_exercise(
                     workout_plan.workout_plan_id, random_abs_exercise.exercise_id)
@@ -145,7 +145,9 @@ def create_workout_plan():
         user_list_of_random_exercises = crud.get_workout_plan_exercises_by_workout_plan_id(
             random_workout_plan.workout_plan_id)
 
-        return render_template("display_workout_plan.html", user_list_of_random_exercises=user_list_of_random_exercises)
+        return render_template("display_workout_plan.html",
+                               user_list_of_random_exercises=user_list_of_random_exercises
+                               )
     else:
         return redirect("/")
 
@@ -173,7 +175,7 @@ def send_text_message():
     return "success"
 
 
-@app.route('/your_account')
+@app.route('/my_account')
 def display_workout_plan():
     """Return and display workout plan by user id"""
 
@@ -188,12 +190,10 @@ def display_workout_plan():
 
             workout_dict = {}
             workout_dict['date'] = user_workout_plan.date_created
-            workout_dict['main_muscle'] = exercise_list[1].exercises.main_muscle_group
+            workout_dict['main_muscle'] = exercise_list[0].exercises.main_muscle_group
             workout_dict['exercises'] = exercise_list
 
             workout_history.append(workout_dict)
-
-            # workout_history.append(exercise_list)
 
         user = crud.get_user_by_user_id(session['logged_in_user_id'])
 
