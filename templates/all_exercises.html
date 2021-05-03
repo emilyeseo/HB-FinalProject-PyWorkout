@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} All Exercises {% endblock %}
+
+{% block body %}
+
+<h1>All Exercises</h1>
+
+<select name="exercises" id="exercises">
+    <option value="back">Back</option>
+    <option value="glutes">Glutes</option>
+    <option value="legs">Legs</option>
+    <option value="abs">Abs</option>
+</select>
+
+
+
+<div id="exercise-list">
+    <div class="row">
+        {% for exercise in exercises %}
+        <div class="card mb-3 justify-content-center align-items-center" style="width:20rem; margin:0.5em;">
+            <div class="card-header" style="width:20rem;"> 
+                <a href="/exercise/{{ exercise.exercise_id }}">{{ exercise.exercise_name }}</a>
+            </div>
+                <div class="card-body">
+                <h5 class="card-title"></h5>
+                
+                    <img class="exercise-pic" src="{{exercise.exercise_img1}}">
+                    <p class="card-text"></p>
+                    
+                    <div class="main-muscle-group">Muscle Group: {{ exercise.main_muscle_group }}</div>
+                    <div class="type_of_exercise">Equipment: {{ exercise.type_of_exercise }}</div>
+                    <div class="equipment">Equipment: {{ exercise.equipment }}</div>
+            </div>
+        </div>
+        <!--
+        <div class="well">
+            <h3> <a href="/exercise/{{ exercise.exercise_id }}">{{ exercise.exercise_name }}</a></h3>
+            <img class = "exercise-pic" src = "{{exercise.exercise_img1}}">
+            <div class ="main-muscle-group">{{ exercise.main_muscle_group }}</div>
+            <a class="btn btn-primary" href="/exercise/{{ exercise.exercise_id }}">Details</a>
+        </div>-->
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+{% endblock %}

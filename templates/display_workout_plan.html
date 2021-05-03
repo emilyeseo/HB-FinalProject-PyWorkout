@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}  {% endblock %} 
+
+{% block body %}
+<div> 
+<h2 style="color:3454D1">Today's Workout </h2>
+
+<form action="/send-sms" method = "POST">
+
+<div id="exercise-list">
+    <div class="row justify-content-center align-items-center">
+        {% for exercise in user_list_of_random_exercises %}
+            <div class="card mb-3 justify-content-center align-items-center" style="width:20rem; height:100; margin:0.5em;">
+                <b>Exercise Name:</b> <span class = "exercise_name">{{ exercise.exercises.exercise_name }}</span><br>
+                <div class="card-header row" style="width:20rem;"> 
+                    <img src = "{{ exercise.exercises.exercise_img1 }}" class="col-md-6">
+                    <img src = "{{ exercise.exercises.exercise_img2 }}" class="col-md-6">
+                </div>
+
+            <div class="card-body" style="D8DBE2;"> 
+                <h5 class="card-title"></h5>
+                <b>Main Muscle Group:</b> {{ exercise.exercises.main_muscle_group }}<br>
+                <b>Difficulty:</b> {{ exercise.exercises.difficulty }}<br>
+                <b>Equipment:</b> {{ exercise.exercises.equipment }}<br>
+                <b>Instructions:</b> {{ exercise.exercises.instructions }}<br>
+                <b>4</b> sets of Reps: <b>{{ exercise.exercises.reps}}</b>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+<div class="text-button" style="border:2px solid D8DBE2;">
+<p style="color:3454D1;">Send today's workout to your phone<br></p>
+<button id="send-txt-button" type="submit">send</button>
+</div>
+</form>
+
+<form action="/my_account">
+<button id="completed" type="submit"> Save your workout! </button>
+</form>
+
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="/static/js/send_text.js"></script>  
+{% endblock %}

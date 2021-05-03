@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}   {% endblock %}
+
+{% block head %}    {% endblock %}
+
+{% block body %}
+
+
+    <div class="row justify-content-center align-items-center">
+    <div id="register-form">
+        <form action = "/register_user" method = "POST" class="register-form formContainer">
+            <div class="text-center mb-4">    
+                <img class="mb-4 mb-4" src="/static/img/logo.jpg" alt="website logo" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">SIGN UP</h1>
+                
+                <p>Challenge yourself. Don't repeat your workout everyday. Shuffle your workout plan</p>
+                <P>Please fill in this form to create an account.</P>
+            </div>
+
+            <div class="form-label-group">                
+                <input id ="firstname" class="form-control" type="text" name="firstname" placeholder="First Name" required>
+            </div>
+
+            <div class="form-label-group">
+                <input id="lastname" class="form-control" type="text" name="lastname" placeholder="Last Name" required>
+            </div>    
+
+            <div class="form-label-group">
+                <input id="email" class="form-control" type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-label-group">
+                <input id= "password" class="form-control" type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="agreement"> I agree to receive notifications and your terms and conditions.
+                </label>
+            </div>
+                <button id ="register-button" type = "submit" class = "btn btn-lg btn-primary btn-block submit">Register</button>
+                <p class="mt-5 mb-3 text-muted text-center">&copy; Hackbright Academy - Emily Seo</p>
+        </form>
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="/static/js/register.js"></script>  
+{% endblock %}

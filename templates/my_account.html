@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}   {% endblock %}
+
+{% block body %}
+
+
+
+
+My name:{{ firstname }} {{ lastname }}<br>
+My email: {{ email }}<br>
+Total workouts: {{number_of_workouts }}
+
+<h2>my workout history:</h2>
+<table>
+{% for workout_info in workout_history %}    
+
+    <td>{{ workout_info['date'] }}</td>
+    <td>{{ workout_info['main_muscle'] }}</td>
+    <td>
+    {% for workout_plan_exercise in workout_info['exercises'] %}
+        <li>{{ workout_plan_exercise.exercises.exercise_name }}</li>
+    {% endfor %}
+    </td>
+</table>
+    
+{% endfor %}
+
+{% endblock %}
