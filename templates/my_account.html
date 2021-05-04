@@ -1,29 +1,34 @@
 {% extends 'base.html' %}
 
-{% block title %}   {% endblock %}
+{% block title %}  PyWorkout {% endblock %}
+
+{% block head %}{% endblock %}
+
+<link rel="stylesheet" href="/static/css/my_account.css">
 
 {% block body %}
 
+<div class="myaccount-form formContainer">
 
+    <div class="pretty-text">
+        My name:{{ firstname }} {{ lastname }}<br>
+        My email: {{ email }}<br>
+    </div>
 
+    <h2>my workout history:</h2>
 
-My name:{{ firstname }} {{ lastname }}<br>
-My email: {{ email }}<br>
-Total workouts: {{number_of_workouts }}
+    <ul class="#">
 
-<h2>my workout history:</h2>
-<table>
-{% for workout_info in workout_history %}    
+    {% for workout_info in workout_history %}    
+    <li>{{ workout_info['date'] }}</li>
+    <li>{{ workout_info['main_muscle'] }}</li>
 
-    <td>{{ workout_info['date'] }}</td>
-    <td>{{ workout_info['main_muscle'] }}</td>
-    <td>
-    {% for workout_plan_exercise in workout_info['exercises'] %}
-        <li>{{ workout_plan_exercise.exercises.exercise_name }}</li>
+        {% for workout_plan_exercise in workout_info['exercises'] %}
+            <li>{{ workout_plan_exercise.exercises.exercise_name }}</li>
+        {% endfor %}
     {% endfor %}
-    </td>
-</table>
+    </ul>
     
-{% endfor %}
+</div>
 
 {% endblock %}

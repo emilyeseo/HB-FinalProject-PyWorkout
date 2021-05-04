@@ -168,7 +168,7 @@ def send_text_message():
     # workout_plan_id will already be stored in this route
 
     # things to do
-    ## use .join
+    # use .join
     # make the route connected to the button.
     # make sure button can determine which "workout_plan_id" is calling.
 
@@ -180,26 +180,29 @@ def display_workout_plan():
     """Return and display workout plan by user id"""
 
     if 'logged_in_user_id' in session:
+
         workout_plans_by_user_id = crud.get_workout_plan_by_user_id(
             session['logged_in_user_id'])
-        workout_history = []
 
         for user_workout_plan in workout_plans_by_user_id:
+
+            workout_history = []
             exercise_list = crud.get_workout_plan_exercises_by_workout_plan_id(
                 user_workout_plan.workout_plan_id)
-
             workout_dict = {}
             workout_dict['date'] = user_workout_plan.date_created
-            workout_dict['main_muscle'] = exercise_list[0].exercises.main_muscle_group
             workout_dict['exercises'] = exercise_list
+            workout_dict['main_muscle'] = exercise_list[0].exercises.main_muscle_group
 
             workout_history.append(workout_dict)
+            user = crud.get_user_by_user_id(session['logged_in_user_id'])
 
-        user = crud.get_user_by_user_id(session['logged_in_user_id'])
+            firstname = user.firstname
+            lastname = user.lastname
+            email = user.email
 
-        firstname = user.firstname
-        lastname = user.lastname
-        email = user.email
+            # import pdb
+            # pdb.set_trace()
 
         return render_template('my_account.html',
                                workout_history=workout_history,

@@ -27,6 +27,9 @@ body, html {
     width: 150px;
 }
 
+
+
+
 .formContainer {
     position: relative;
     margin: 8% auto;
@@ -38,6 +41,12 @@ body, html {
     box-sizing: border-box;
     border-radius: 8px;
 }
+.myaccount-form{
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    margin: 0 auto;
+} 
 
 .register-form{
     width: 100%;
@@ -56,24 +65,4 @@ body, html {
 .form-label-group {
     position: relative;
     margin-bottom: 1rem;
-}
-
-.carousel-caption {
-    position: relative;
-    left: 0;
-    top: 0;
-}
-
-@media only screen and (max-width: 576px) {
-    .carousel-caption {
-        h5 {
-            font-size: 1rem;
-        }
-    }
-}
-
-.carousel-caption {
-    position: relative;
-    left: 0;
-    top: 0;
 }
