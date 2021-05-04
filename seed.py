@@ -64,7 +64,7 @@ for n in range(10):
 
     for i in range(3):
         user_workout_plan = crud.create_workout_plan(
-            user.user_id, date_created=f"2021-04-{day} 23:03:30.173886")
+            user.user_id, date_created=f"2021-04-{day}")
 
         users_workout_plan_exercise_list = []
 

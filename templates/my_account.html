@@ -4,7 +4,7 @@
 
 {% block head %}{% endblock %}
 
-<link rel="stylesheet" href="/static/css/my_account.css">
+
 
 {% block body %}
 
@@ -21,7 +21,7 @@
 
     {% for workout_info in workout_history %}    
     <li>{{ workout_info['date'] }}</li>
-    <li>{{ workout_info['main_muscle'] }}</li>
+    <li id="body">{{ workout_info['main_muscle'] }}</li>
 
         {% for workout_plan_exercise in workout_info['exercises'] %}
             <li>{{ workout_plan_exercise.exercises.exercise_name }}</li>

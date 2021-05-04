@@ -5,6 +5,7 @@ body, html {
     background-attachment: fixed;
     
   }
+
 .background { 
     background-image: url("/static/img/background.jpg"); 
       /* Full height */

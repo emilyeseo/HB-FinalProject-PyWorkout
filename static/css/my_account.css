@@ -1,0 +1,6 @@
+.myaccount-form li:before { 
+    content: '\1F95E'; 
+    margin-left: -20px; 
+    margin-right: 10px; 
+} 
+
