@@ -1,23 +1,25 @@
 body, html {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-attachment: fixed;
-    
-  }
-
-.background { 
     background-image: url("/static/img/background.jpg"); 
-      /* Full height */
-    height: 100%;
-    width: 100%;
-    /* Center and scale the image nicely */
+    background-attachment: fixed;
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
-    position:absolute;
-    background-attachment: fixed;
-    
+    height: 100%;
+    width: 100%;
+    position: absolute;    
+  }
+
+/* Modify the background color */
+          
+.navbar-custom {
+    background-color: FB5607;
+}
+
+/* Modify brand and text color */
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: D8DBE2;
 }
 
 .text-center{
@@ -27,9 +29,6 @@ body, html {
 .exercise-pic{
     width: 150px;
 }
-
-
-
 
 .formContainer {
     position: relative;

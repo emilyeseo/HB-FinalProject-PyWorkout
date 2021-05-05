@@ -50,7 +50,6 @@ def logout():
 @app.route('/register_user')
 def register_user():
     """View register user account page"""
-
     return render_template('create_account_form.html')
 
 

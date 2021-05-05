@@ -16,7 +16,7 @@ document.querySelector('#register-button').addEventListener('click', (evt) => {
             Toastify({
                 text: "Sorry. This login email already exists. Please try a different email address to register, or login to your exisiting account.",
                 duration: 2000,
-                backgroundColor: "linear-gradient(to right, #f22e8a, #ebccda)"
+                backgroundColor: "linear-gradient(to right, #FB5607, #D8DBE2)"
                 }).showToast();
             setTimeout(() => {window.location.href='/'}, 3000);
         }
@@ -25,7 +25,7 @@ document.querySelector('#register-button').addEventListener('click', (evt) => {
             Toastify({
                 text: "Account succesfully created. Please proceed and log in to your account.",
                 duration: 2000,
-                backgroundColor: "linear-gradient(to right, #f22e8a, #ebccda)"
+                backgroundColor: "linear-gradient(to right, #FB5607, #D8DBE2)"
                 }).showToast();
             setTimeout(() => {window.location.href='/'}, 3000);
         }

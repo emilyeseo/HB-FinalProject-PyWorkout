@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
 
     <title>
-        {% block title %}{% endblock %} - Pyworkout 
+        {% block title %}{% endblock %} - PyWorkout 
     </title>
 
     {% block head %}{% endblock %}
@@ -30,12 +30,12 @@
 </head>
 
 <body>
-    <div class="container-fluid background">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
 
-                <nav class="navbar navbar-dark navbar navbar-expand-lg" id="navbar">
-                    <a id="brand-logo" class="navbar-brand" href="/">Workout Creator</a>
+                <nav class="navbar navbar-custom navbar navbar-expand-lg" id="navbar">
+                    <a id="brand-logo" class="navbar-brand" href="/">PyWorkout</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
                                 <a class="nav-link" href="/all_exercises">View all Workouts</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/logout">Log out</a>
+                                <a class="nav-link" id="logout" href="/logout">Log out</a>
                             </li>
                         </ul>
                     </div>

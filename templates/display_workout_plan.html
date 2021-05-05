@@ -3,8 +3,8 @@
 {% block title %}  {% endblock %} 
 
 {% block body %}
-<div> 
-<h2 style="color:3454D1">Today's Workout </h2>
+<div class="justify-content-center align-items-center"> 
+<h2 style="color: #FB5607">Today's Workout </h2>
 
 <form action="/send-sms" method = "POST">
 
@@ -32,19 +32,21 @@
             {% endfor %}
         </div>
 
-        <div class="text-button">
-            <p style="color:3454D1;">Send today's workout to your phone<br></p>
+        <div class="text-button center">
+            <p style="color: #FB5607"">Send today's workout to your phone<br></p>
             <button id="send-txt-button" type="submit">send</button>
         </div>
         
     </div>
 </form>
 
+
 <form action="/my_account">
 <button id="completed" type="submit"> Save your workout! </button>
 </form>
 
 </div>
+
 {% endblock %}
 
 {% block javascript %}

@@ -3,29 +3,27 @@
 {% block title %} Hello Let's Create a workout for Today! {% endblock %}
 
 {% block body %}
-
     <div class="row justify-content-center align-items-center">
-
         <div id="signin-form">
             <form action = "/create_workout_plan" method = "POST" id="signin-form" class="signin-form formContainer">
                 <div class="text-center mb-4">     
-                    <h3 class="mb-3 font-weight-normal">Please choose the body part you would like to workout today.</h3>
+                    <h3 class="mb-3 font-weight-normal" style="color: #FB5607">
+                        Please choose the body part you would like to workout today.
+                    </h3>
                 </div>
-                <div class="form-label-group">
-                    <input type = "radio" name = "main_muscle_group" value = "legs" >
-                    <label for="legs">legs</label><br>
-                    <input type = "radio" name = "main_muscle_group" value = "back" >
+
+                <div class="form-label-group text-center">
+                    <input type="radio" class="btn" name="main_muscle_group" value="legs">
+                    <label for="legs" >legs</label><br>
+                    <input type="radio" class="btn" name="main_muscle_group" value="back">
                     <label for="back">back</label><br>
-                    <input type = "radio" name = "main_muscle_group" value = "abs" >
+                    <input type="radio" class="btn" name="main_muscle_group" value="abs" >
                     <label for="abs">abs</label><br>
-                    <input type = "radio" name = "main_muscle_group" value = "glutes" >
+                    <input type="radio" class="btn" name="main_muscle_group" value="glutes">
                     <label for="glutes">glutes</label><br>
                 </div>
-            
-            <input value = "Let's Go!" type = "Submit"  >
+            <input value = "Let's Go!" type = "Submit"  class="btn btn-lg btn-primary btn-block submit">
             </form>
         </div>
-
     </div>
-
 {% endblock %}
